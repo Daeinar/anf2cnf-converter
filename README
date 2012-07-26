@@ -1,0 +1,27 @@
+Algebraic Normal Form to Conjunctive Normal Form Converter
+
+VERSION
+0.1 (alpha)
+
+LICENSE
+This program is free software; see LICENSE for more details
+
+FUNCTIONALITY
+Converts a multivariate polynomial system into a logical formula in conjunctive
+normal form (CNF). Supports different term substitution strategies. For more
+details please see:
+
+http://www.degruyter.com/view/j/gcc.2010.2.issue-2/gcc.2010.016/gcc.2010.016.xml
+
+REQUIREMENTS
+* Python 3
+
+USAGE
+./anf2cnf.py CNF [3-6] [SS,LPS,DPS,QPS] [SS,CPS] source target
+./anf2cnf.py XOR [SS,LPS,DPS,QPS] [SS,CPS] source target
+
+EXAMPLES
+Coming soon.
+
+CONTACT
+For any questions you can contact Philipp Jovanovic via <p dot jo at gmx dot net>  
