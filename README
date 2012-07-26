@@ -4,14 +4,19 @@ VERSION
 0.1 (alpha)
 
 LICENSE
-This program is free software; see LICENSE for more details
+This program is free software; see LICENSE for more details.
 
 FUNCTIONALITY
-Converts a multivariate polynomial system into a logical formula in conjunctive
-normal form (CNF). Supports different term substitution strategies. For more
-details please see:
+Converts a multivariate polynomial system over F_2 into a logical formula in
+conjunctive normal form (CNF). 
 
-http://www.degruyter.com/view/j/gcc.2010.2.issue-2/gcc.2010.016/gcc.2010.016.xml
+FEATURES
+Support of different output formats: 
+* DIMACS
+* XOR-DIMACS (for cryptominisat), please see http://www.msoos.org/xor-clauses
+
+Support of different term substitution strategies.  For more details please
+see: http://www.degruyter.com/view/j/gcc.2010.2.issue-2/gcc.2010.016/gcc.2010.016.xml
 
 On request a copy of the above paper can be sent to the interested reader.
 
@@ -21,6 +26,16 @@ REQUIREMENTS
 USAGE
 ./anf2cnf.py CNF [3-6] [SS,LPS,DPS,QPS] [SS,CPS] source target
 ./anf2cnf.py XOR [SS,LPS,DPS,QPS] [SS,CPS] source target
+
+DATAFORMAT (INPUT)
+The first line of the input file must contain the configuration of the
+indeterminates used by the polynomial system. Multi-indices are supported.
+Notation: 
+* VAR1[(0|1)..N];VAR2[(0|1)..M,(0|1)..K]
+* VAR1,VAR2 alphabetic characters (lower and upper case)
+* N,M,K natural numbers 
+So for example k[1..3];X[0..1,1..2];y[1..2,0..1] expands to the 12 indeterminates
+k[1],k[2],k[3],X[0,1],X[0,1],X[0,2],X[1,1],X[1,2],y[1,0],y[1,1],y[2,0],y[2,1].
 
 EXAMPLES
 Coming soon.
