@@ -11,13 +11,11 @@ Converts a multivariate polynomial system over F_2 into a logical formula in
 conjunctive normal form (CNF). 
 
 FEATURES
-Support of different output formats: 
-* DIMACS
-* XOR-DIMACS (for cryptominisat), please see http://www.msoos.org/xor-clauses
-
-Support of different term substitution strategies.  For more details please
-see: http://www.degruyter.com/view/j/gcc.2010.2.issue-2/gcc.2010.016/gcc.2010.016.xml
-
+* Different output formats: 
+  - DIMACS
+  - XOR-DIMACS (for cryptominisat), please see http://www.msoos.org/xor-clauses
+* Variety of term substitution strategies, for more details please see: 
+http://www.degruyter.com/view/j/gcc.2010.2.issue-2/gcc.2010.016/gcc.2010.016.xml
 On request a copy of the above paper can be sent to the interested reader.
 
 REQUIREMENTS
